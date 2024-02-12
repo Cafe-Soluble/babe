@@ -1,0 +1,81 @@
+@media (max-width: 990px) and (orientation: portrait) {
+    *{
+        font-family: 'Dancing Script', cursive;
+        font-family: 'Roboto', sans-serif;
+        font-family: 'Space Mono', monospace;
+    }
+        body, html {
+        height: 100%;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background-color: #f9fbf8;
+    }
+        .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        vertical-align: middle;
+        transition: transform 0.3s ease;
+        font-size: 1.5em;
+        text-align: center;
+        }
+        .end{
+        display: flex;
+        align-items: center;
+    
+        }
+        .btn {
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+        margin: 5px;
+        transition: transform 0.9s ease, font-size 0.3s ease; /* Ajouté font-size à la transition */
+        }
+        .oui {
+        background-color: #79a251;
+        margin-bottom: 40px;
+        margin-top: 50px;
+        font-size: 40px;
+        color: #f9fbf8;
+        border-radius: 20px;
+        border: none;
+    
+        }
+        .non {
+        background-color: #ce445e;
+        font-size: 40px;
+        max-width: 800px;
+        color: #f9fbf8;
+        border-radius: 20px;
+        border: none;
+        }
+    
+        .oui:hover{
+        background-color: #547930;
+        }
+        .non:hover{
+        background-color: #ad1d38;
+        }
+        .superbe{
+            padding-top: 35px;
+            font-size: 40px;
+        }
+        img{
+            width: 400px;
+        }
+    
+        @keyframes shake {
+        0%, 100% { transform: translateX(0); }
+        10%, 30%, 50%, 70%, 90% { transform: translateX(-10px); }
+        20%, 40%, 60%, 80% { transform: translateX(10px); }
+        }
+    
+        .shake {
+        animation: shake 0.2s ease-in-out;
+        }
+    
+}
+
