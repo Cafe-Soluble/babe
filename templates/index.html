@@ -91,21 +91,20 @@ let speed = 1;
 let nombreDeClicNon = 0;
 let messagesNon = [
     "Es-tu sûre ?",
-    "Es-tu absolument sûre ?",
-    "Es-tu certaine de vouloir cliquer sur NON ?",
+    "Es-tu absolument certaine ?",
+    "Tu me confirmes vouloir cliquer sur NON ?",
     "As-tu bien considéré ta réponse ?",
     "Je serai très triste si tu cliques sur ce bouton.",
     "Tu n'as donc pas de coeur.",
     "Arrête tes bêtises, et clique sur oui.",
     "Un astéroïde destructeur s'approche. Changerais-tu d'avis pour sauver le monde ?",
     "Une invasion de zombies est en cours. Un oui pourrait être notre seule échappatoire.",
-    "Une nouvelle maladie mortelle a été découverte. Seul l'amour peut nous sauver, dis oui !",
     "Macron impose l'abstinence globale. Un oui briserait le sort.",
     "Les aliens menacent d'envahir si tu refuses. Es-tu prête à prendre ce risque ?",
     "Une éruption solaire cataclysmique est prévue. Un oui pourrait nous protéger.",
     "Les robots ont pris le contrôle. Un oui pourrait déclencher la résistance.",
     "Une faille temporelle s'ouvrira si tu dis non. Veux-tu vraiment risquer le chaos temporel ?",
-    "Le réchauffement climatique s'accélère. Un oui pourrait lancer la révolution écologique.",
+    "Le réchauffement climatique s'accélère. Un oui ferait nommer Serge Zaka Premier ministre.",
     "Une pénurie mondiale de chocolat a été annoncée. Seul un oui pourrait inverser cette tendance tragique.",
     "Je ne suis pas sûr d'avoir bien compris ta réponse. Veux-tu répondre non ?"
 ];
@@ -118,7 +117,7 @@ document.getElementById('non').addEventListener('click', function() {
 
 
 document.getElementById('oui').addEventListener('click', function() {
-    document.getElementById('reponse').innerHTML = "<div class='end'><h3 class='superbe'>SUPERBE CE SOIR JE BAISE.</h3><img src='https://media.tenor.com/gUiu1zyxfzYAAAAi/bear-kiss-bear-kisses.gif' alt='Image' style='width: 200px;'></div>";
+    document.getElementById('reponse').innerHTML = "<div class='end'><h3 class='superbe'>SUPER CE SOIR JE BAISE.</h3><img src='https://media.tenor.com/gUiu1zyxfzYAAAAi/bear-kiss-bear-kisses.gif' alt='Image' style='width: 200px;'></div>";
     document.querySelector('.container').style.display = "none"; // Masque tous les éléments sauf la réponse
 });
 
@@ -135,21 +134,21 @@ document.getElementById('non').addEventListener('click', function() {
 
         // Augmente la font-size de OUI au lieu de modifier scaleOui
     var currentFontSizeOui = parseInt(window.getComputedStyle(btnOui).fontSize, 10);
-    btnOui.style.fontSize = `${currentFontSizeOui + 10 + nombreDeClicNon*1.9}px`;
+    btnOui.style.fontSize = `${currentFontSizeOui + 7 + nombreDeClicNon*1.1}px`;
 
     // Si scaleOui dépasse 5, déplace le bouton NON aléatoirement
     if (nombreDeClicNon > 9) {
         moveButtonRandomly(speed);
         moveButtonRandomlyAfterClic();
         speed *= 0.95;
-        scaleNon *= 0.97;
+        scaleNon *= 0.999;
 
 
     }
 
     // Mise à jour conditionnelle des transformations pour éviter le chevauchement excessif
     if (nombreDeClicNon < 4) { // Limite de croissance pour OUI
-        scaleNon *= 0.95;
+        scaleNon *= 0.99;
     }
 
     // Applique les transformations
