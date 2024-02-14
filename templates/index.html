@@ -28,6 +28,7 @@
   <button id="non" class="btn non">NON <i class="fa-regular fa-face-sad-cry"></i></i></button>
 </div>
 <div id="reponse"></div>
+<div id="score"></div>
 
 <script>
 
@@ -118,6 +119,8 @@ document.getElementById('non').addEventListener('click', function() {
 
 document.getElementById('oui').addEventListener('click', function() {
     document.getElementById('reponse').innerHTML = "<div class='end'><h3 class='superbe'>YOUPIIII !</h3><img src='https://media.tenor.com/gUiu1zyxfzYAAAAi/bear-kiss-bear-kisses.gif' alt='Image' style='width: 200px;'></div>";
+    document.getElementById('score').innerHTML = "<p>SCORE = " + nombreDeClicNon + "</p>";
+
     document.querySelector('.container').style.display = "none"; // Masque tous les éléments sauf la réponse
 });
 
