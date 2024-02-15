@@ -30,7 +30,7 @@
     font-size: 16px;
     cursor: pointer;
     margin: 5px;
-    transition: transform 0.9s ease, font-size 0.3s ease; /* Ajouté font-size à la transition */
+    transition: transform 0.9s ease, font-size 0.3s ease; 
     }
     .oui {
     background-color: #79a251;
